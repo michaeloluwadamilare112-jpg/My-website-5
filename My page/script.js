@@ -4,62 +4,84 @@
 
 window.addEventListener("load", () => {
 
-    const loader = document.getElementById("loader");
+const loader = document.getElementById("loader");
 
-    setTimeout(() => {
-        loader.style.opacity = "0";
+if(loader){
 
-        setTimeout(() => {
-            loader.style.display = "none";
-        }, 600);
+setTimeout(() => {
 
-    }, 1500);
+loader.style.opacity = "0";
+
+setTimeout(() => {
+
+loader.style.display = "none";
+
+}, 600);
+
+}, 1500);
+
+}
 
 });
-
 
 /* ==========================
    MOBILE MENU
 ========================== */
 
-const menuBtn = document.getElementById("menu-btn");
-const nav = document.getElementById("nav");
+const menuBtn =
+document.getElementById("menu-btn");
+
+const nav =
+document.getElementById("nav");
+
+if(menuBtn){
 
 menuBtn.addEventListener("click", () => {
 
-    nav.classList.toggle("active");
+nav.classList.toggle("active");
 
-    if (nav.classList.contains("active")) {
+if(nav.classList.contains("active")){
 
-        menuBtn.innerHTML =
-            '<i class="fas fa-times"></i>';
+menuBtn.innerHTML =
+'<i class="fas fa-times"></i>';
 
-    } else {
+}else{
 
-        menuBtn.innerHTML =
-            '<i class="fas fa-bars"></i>';
+menuBtn.innerHTML =
+'<i class="fas fa-bars"></i>';
 
-    }
+}
 
 });
 
+}
 
-/* Close menu after click */
+/* ==========================
+   CLOSE MENU AFTER CLICK
+========================== */
 
-document.querySelectorAll("nav a")
+document
+.querySelectorAll("nav a")
 .forEach(link => {
 
-    link.addEventListener("click", () => {
+link.addEventListener("click", () => {
 
-        nav.classList.remove("active");
+if(nav){
 
-        menuBtn.innerHTML =
-            '<i class="fas fa-bars"></i>';
+nav.classList.remove("active");
 
-    });
+}
+
+if(menuBtn){
+
+menuBtn.innerHTML =
+'<i class="fas fa-bars"></i>';
+
+}
 
 });
 
+});
 
 /* ==========================
    COUNTER ANIMATION
@@ -70,37 +92,36 @@ document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
 
-    const updateCounter = () => {
+const updateCounter = () => {
 
-        const target =
-        +counter.getAttribute("data-target");
+const target =
++counter.getAttribute("data-target");
 
-        const current =
-        +counter.innerText;
+const current =
++counter.innerText;
 
-        const increment =
-        target / 80;
+const increment =
+target / 80;
 
-        if (current < target) {
+if(current < target){
 
-            counter.innerText =
-            Math.ceil(current + increment);
+counter.innerText =
+Math.ceil(current + increment);
 
-            setTimeout(updateCounter, 25);
+setTimeout(updateCounter, 25);
 
-        } else {
+}else{
 
-            counter.innerText =
-            target + "+";
+counter.innerText =
+target + "+";
 
-        }
+}
 
-    };
+};
 
-    updateCounter();
+updateCounter();
 
 });
-
 
 /* ==========================
    PORTFOLIO FILTER
@@ -118,38 +139,41 @@ document.querySelectorAll(
 
 filterButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+button.addEventListener("click", () => {
 
-        filterButtons.forEach(btn =>
-            btn.classList.remove("active")
-        );
+filterButtons.forEach(btn => {
 
-        button.classList.add("active");
-
-        const filter =
-        button.getAttribute("data-filter");
-
-        portfolioItems.forEach(item => {
-
-            if (
-                filter === "all" ||
-                item.classList.contains(filter)
-            ) {
-
-                item.style.display = "block";
-
-            } else {
-
-                item.style.display = "none";
-
-            }
-
-        });
-
-    });
+btn.classList.remove("active");
 
 });
 
+button.classList.add("active");
+
+const filter =
+button.getAttribute("data-filter");
+
+portfolioItems.forEach(item => {
+
+if(
+filter === "all" ||
+item.classList.contains(filter)
+){
+
+item.style.display =
+"block";
+
+}else{
+
+item.style.display =
+"none";
+
+}
+
+});
+
+});
+
+});
 
 /* ==========================
    TESTIMONIAL SLIDER
@@ -160,258 +184,224 @@ document.querySelectorAll(".slide");
 
 let currentSlide = 0;
 
-function showSlide(index) {
+function showSlide(index){
 
-    slides.forEach(slide => {
+slides.forEach(slide => {
 
-        slide.classList.remove("active");
+slide.classList.remove("active");
 
-    });
+});
 
-    slides[index]
-    .classList.add("active");
+if(slides[index]){
+
+slides[index]
+.classList.add("active");
 
 }
 
+}
+
+if(slides.length > 0){
+
 setInterval(() => {
 
-    currentSlide++;
+currentSlide++;
 
-    if (
-        currentSlide >= slides.length
-    ) {
-        currentSlide = 0;
-    }
+if(
+currentSlide >=
+slides.length
+){
 
-    showSlide(currentSlide);
+currentSlide = 0;
+
+}
+
+showSlide(currentSlide);
 
 }, 4000);
 
+}
 
 /* ==========================
    HEADER SHADOW
 ========================== */
 
-window.addEventListener("scroll", () => {
+window.addEventListener(
+"scroll",
+() => {
 
-    const header =
-    document.querySelector("header");
+const header =
+document.querySelector("header");
 
-    if (window.scrollY > 50) {
+if(header){
 
-        header.style.boxShadow =
-        "0 0 20px rgba(0,255,136,.25)";
+if(window.scrollY > 50){
 
-    } else {
+header.style.boxShadow =
+"0 0 20px rgba(0,255,136,.25)";
 
-        header.style.boxShadow =
-        "none";
+}else{
 
-    }
+header.style.boxShadow =
+"none";
 
-});
+}
 
+}
+
+}
+);
 
 /* ==========================
-   SCROLL REVEAL
+   ACTIVE NAVIGATION
 ========================== */
 
-ScrollReveal({
+const currentPage =
+window.location.pathname
+.split("/")
+.pop();
 
-    distance: "80px",
-    duration: 1500,
-    delay: 150,
-    reset: false
+document
+.querySelectorAll("nav a")
+.forEach(link => {
+
+const href =
+link.getAttribute("href");
+
+if(href === currentPage){
+
+link.classList.add("active");
+
+}
 
 });
 
-ScrollReveal().reveal(
-
-".hero-text",
-
-{
-origin: "left"
-}
-
-);
-
-ScrollReveal().reveal(
-
-".hero-image",
-
-{
-origin: "right"
-}
-
-);
-
-ScrollReveal().reveal(
-
-".service-card",
-
-{
-origin: "bottom",
-interval: 150
-}
-
-);
-
-ScrollReveal().reveal(
-
-".portfolio-item",
-
-{
-origin: "bottom",
-interval: 120
-}
-
-);
-
-ScrollReveal().reveal(
-
-".about-box",
-
-{
-origin: "top"
-}
-
-);
-
-ScrollReveal().reveal(
-
-".slide",
-
-{
-origin: "bottom"
-}
-
-);
-
-ScrollReveal().reveal(
-
-".contact-form",
-
-{
-origin: "bottom"
-}
-
-);
-
-
 /* ==========================
-   SMOOTH BUTTON EFFECT
-========================== */
-
-const buttons =
-document.querySelectorAll(
-".btn, .btn-outline"
-);
-
-buttons.forEach(button => {
-
-    button.addEventListener(
-    "mouseenter",
-    () => {
-
-        button.style.transform =
-        "translateY(-5px)";
-
-    });
-
-    button.addEventListener(
-    "mouseleave",
-    () => {
-
-        button.style.transform =
-        "translateY(0px)";
-
-    });
-
-});
-
-
-/* ==========================
-   FLOATING WHATSAPP PULSE
+   WHATSAPP PULSE
 ========================== */
 
 const whatsapp =
 document.querySelector(".whatsapp");
 
+if(whatsapp){
+
 setInterval(() => {
 
-    whatsapp.style.transform =
-    "scale(1.15)";
+whatsapp.style.transform =
+"scale(1.15)";
 
-    setTimeout(() => {
+setTimeout(() => {
 
-        whatsapp.style.transform =
-        "scale(1)";
+whatsapp.style.transform =
+"scale(1)";
 
-    }, 500);
+}, 500);
 
 }, 2000);
 
+}
 
 /* ==========================
-   ACTIVE NAV LINK
+   SCROLL TO TOP BUTTON
 ========================== */
 
-const sections =
-document.querySelectorAll("section");
+const topBtn =
+document.createElement("button");
 
-const navLinks =
-document.querySelectorAll("nav a");
+topBtn.innerHTML =
+'<i class="fas fa-arrow-up"></i>';
 
-window.addEventListener("scroll", () => {
+topBtn.id =
+"scrollTopBtn";
 
-    let current = "";
+document.body.appendChild(topBtn);
 
-    sections.forEach(section => {
+topBtn.style.position =
+"fixed";
 
-        const sectionTop =
-        section.offsetTop;
+topBtn.style.right =
+"20px";
 
-        if (
-            pageYOffset >=
-            sectionTop - 200
-        ) {
+topBtn.style.bottom =
+"100px";
 
-            current =
-            section.getAttribute("id");
+topBtn.style.width =
+"50px";
 
-        }
+topBtn.style.height =
+"50px";
 
-    });
+topBtn.style.border =
+"none";
 
-    navLinks.forEach(link => {
+topBtn.style.borderRadius =
+"50%";
 
-        link.classList.remove("active");
+topBtn.style.background =
+"#00ff88";
 
-        if (
-            link.getAttribute("href") ===
-            "#" + current
-        ) {
+topBtn.style.color =
+"#000";
 
-            link.classList.add("active");
+topBtn.style.cursor =
+"pointer";
 
-        }
+topBtn.style.display =
+"none";
 
-    });
+topBtn.style.zIndex =
+"999";
+
+window.addEventListener(
+"scroll",
+() => {
+
+if(window.scrollY > 300){
+
+topBtn.style.display =
+"block";
+
+}else{
+
+topBtn.style.display =
+"none";
+
+}
+
+}
+);
+
+topBtn.addEventListener(
+"click",
+() => {
+
+window.scrollTo({
+
+top:0,
+behavior:"smooth"
 
 });
 
+}
+);
 
 /* ==========================
-   FUTURE FEATURES
+   PRELOADING EFFECT
 ========================== */
 
-// Dark/Light Mode
-// Portfolio Lightbox
-// Contact Form API
-// Blog Section
-// Pricing Cards
-// Live Chat Widget
+const images =
+document.querySelectorAll("img");
+
+images.forEach(img => {
+
+img.loading = "lazy";
+
+});
+
+/* ==========================
+   CONSOLE MESSAGE
+========================== */
 
 console.log(
-"BLACK DRAGON WEBSITE READY"
+"BLACK DRAGON GRAPHICS DESIGN READY"
 );
