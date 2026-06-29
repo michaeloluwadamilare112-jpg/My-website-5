@@ -1,0 +1,997 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:#ffffff;
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+}
+
+ul{
+list-style:none;
+}
+
+/* ==========================
+   LOADER
+========================== */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader-content h1{
+font-size:4rem;
+font-weight:800;
+color:#00ff88;
+
+text-shadow:
+0 0 10px #00ff88,
+0 0 20px #00ff88,
+0 0 40px #00ff88;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+padding:20px 8%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(0,0,0,.85);
+
+backdrop-filter:blur(15px);
+
+z-index:1000;
+
+transition:.4s;
+}
+
+.logo{
+font-size:2rem;
+font-weight:700;
+letter-spacing:1px;
+}
+
+.logo span{
+color:#00ff88;
+}
+
+nav{
+display:flex;
+gap:35px;
+}
+
+nav a{
+color:#fff;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00ff88;
+}
+
+nav a.active{
+color:#00ff88;
+}
+
+#menu-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero{
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:60px;
+
+padding:120px 8%;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h4{
+font-size:1.2rem;
+color:#00ff88;
+margin-bottom:10px;
+}
+
+.hero-text h1{
+font-size:5rem;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-text h1 span{
+color:#00ff88;
+
+text-shadow:
+0 0 10px #00ff88,
+0 0 20px #00ff88;
+}
+
+.hero-text p{
+font-size:1.1rem;
+line-height:1.9;
+max-width:600px;
+color:#cccccc;
+margin-bottom:30px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.hero-buttons{
+display:flex;
+gap:15px;
+margin-bottom:40px;
+}
+
+.btn{
+display:inline-block;
+
+padding:15px 35px;
+
+background:#00ff88;
+color:#000;
+
+border-radius:50px;
+
+font-weight:700;
+
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+
+box-shadow:
+0 0 15px #00ff88,
+0 0 25px #00ff88;
+}
+
+.btn-outline{
+display:inline-block;
+
+padding:15px 35px;
+
+border:2px solid #00ff88;
+
+color:#fff;
+
+border-radius:50px;
+
+transition:.4s;
+}
+
+.btn-outline:hover{
+background:#00ff88;
+color:#000;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.stats{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.stat-box{
+background:#111111;
+
+padding:20px;
+
+border-radius:15px;
+
+min-width:120px;
+
+text-align:center;
+
+border:1px solid #00ff88;
+}
+
+.stat-box h2{
+font-size:2rem;
+color:#00ff88;
+}
+
+.stat-box p{
+color:#ccc;
+margin-top:5px;
+}
+
+/* ==========================
+   HERO IMAGE
+========================== */
+
+.hero-image{
+flex:1;
+
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.dragon-circle{
+width:420px;
+height:420px;
+
+border-radius:50%;
+
+border:4px solid #00ff88;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:8rem;
+
+color:#00ff88;
+
+box-shadow:
+0 0 20px #00ff88,
+0 0 50px #00ff88,
+0 0 100px rgba(0,255,136,.3);
+}
+
+/* ==========================
+   PAGE BANNER
+========================== */
+
+.page-banner{
+padding:170px 8% 100px;
+
+text-align:center;
+}
+
+.page-banner h1{
+font-size:4rem;
+color:#00ff88;
+margin-bottom:15px;
+}
+
+.page-banner p{
+font-size:1.1rem;
+color:#aaa;
+}
+
+/* ==========================
+   SECTION TITLE
+========================== */
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#aaa;
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.cta{
+padding:100px 8%;
+text-align:center;
+}
+
+.cta h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.cta p{
+color:#aaa;
+margin-bottom:30px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+padding:50px 8%;
+
+text-align:center;
+
+background:#000;
+border-top:1px solid #111;
+}
+
+footer h3{
+margin-bottom:10px;
+color:#00ff88;
+}
+
+footer p{
+color:#aaa;
+}
+/* ==========================
+   SERVICES PAGE
+========================== */
+
+.service-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+padding:100px 8%;
+}
+
+.service-card{
+background:#111;
+
+padding:40px 30px;
+
+border-radius:20px;
+
+text-align:center;
+
+border:1px solid #222;
+
+transition:.4s;
+}
+
+.service-card:hover{
+
+transform:translateY(-10px);
+
+border-color:#00ff88;
+
+box-shadow:
+0 0 20px rgba(0,255,136,.4);
+
+}
+
+.service-card i{
+font-size:3rem;
+color:#00ff88;
+margin-bottom:20px;
+}
+
+.service-card h3{
+margin-bottom:15px;
+font-size:1.4rem;
+}
+
+.service-card p{
+color:#ccc;
+line-height:1.8;
+}
+
+/* ==========================
+   PORTFOLIO FILTERS
+========================== */
+
+.filter-buttons{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+gap:15px;
+
+margin-bottom:50px;
+
+}
+
+.filter-buttons button{
+
+padding:12px 25px;
+
+background:#111;
+
+color:#fff;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active{
+
+background:#00ff88;
+color:#000;
+
+}
+
+/* ==========================
+   PORTFOLIO GRID
+========================== */
+
+.portfolio-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+padding:0 8% 100px;
+
+}
+
+.portfolio-item{
+
+height:300px;
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:20px;
+
+background:#111;
+
+cursor:pointer;
+
+}
+
+.portfolio-item img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.portfolio-item:hover img{
+
+transform:scale(1.1);
+
+}
+
+.portfolio-overlay{
+
+position:absolute;
+
+left:0;
+bottom:-100%;
+
+width:100%;
+height:100%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:
+rgba(0,255,136,.85);
+
+font-size:1.3rem;
+font-weight:700;
+
+color:#000;
+
+transition:.4s;
+
+}
+
+.portfolio-item:hover
+.portfolio-overlay{
+
+bottom:0;
+
+}
+
+/* ==========================
+   ABOUT PAGE
+========================== */
+
+.about-section{
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+gap:60px;
+
+padding:100px 8%;
+
+flex-wrap:wrap;
+
+}
+
+.about-image{
+
+flex:1;
+
+display:flex;
+justify-content:center;
+
+}
+
+.about-content{
+
+flex:1;
+max-width:650px;
+
+}
+
+.about-content h2{
+
+font-size:3rem;
+
+margin-bottom:20px;
+
+color:#00ff88;
+
+}
+
+.about-content p{
+
+line-height:1.9;
+
+color:#ccc;
+
+margin-bottom:20px;
+
+}
+
+.dragon-circle.small{
+
+width:280px;
+height:280px;
+
+font-size:5rem;
+
+}
+
+/* ==========================
+   TESTIMONIALS
+========================== */
+
+.testimonials-container{
+
+max-width:900px;
+
+margin:auto;
+
+padding:100px 8%;
+
+}
+
+.slide{
+
+display:none;
+
+background:#111;
+
+padding:50px;
+
+border-radius:20px;
+
+text-align:center;
+
+border:1px solid #222;
+
+}
+
+.slide.active{
+
+display:block;
+
+}
+
+.slide i{
+
+font-size:3rem;
+
+color:#00ff88;
+
+margin-bottom:20px;
+
+}
+
+.slide p{
+
+line-height:1.9;
+
+font-size:1.1rem;
+
+color:#ddd;
+
+margin-bottom:20px;
+
+}
+
+.slide h3{
+
+color:#00ff88;
+
+}
+
+/* ==========================
+   CONTACT PAGE
+========================== */
+
+.contact-page{
+
+display:flex;
+
+gap:50px;
+
+padding:100px 8%;
+
+flex-wrap:wrap;
+
+}
+
+.contact-info{
+
+flex:1;
+min-width:300px;
+
+}
+
+.contact-info h2{
+
+font-size:2.5rem;
+
+color:#00ff88;
+
+margin-bottom:20px;
+
+}
+
+.contact-info p{
+
+line-height:1.8;
+
+color:#ccc;
+
+margin-bottom:30px;
+
+}
+
+.contact-item{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:20px;
+
+}
+
+.contact-item i{
+
+font-size:1.4rem;
+
+color:#00ff88;
+
+}
+
+.contact-form-box{
+
+flex:1;
+min-width:300px;
+
+}
+
+.contact-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+padding:18px;
+
+background:#111;
+
+border:1px solid #222;
+
+border-radius:10px;
+
+color:#fff;
+
+}
+
+.contact-form textarea{
+
+height:180px;
+
+resize:none;
+
+}
+
+.contact-form button{
+
+padding:18px;
+
+border:none;
+
+border-radius:50px;
+
+background:#00ff88;
+
+color:#000;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+.contact-form button:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* ==========================
+   WHATSAPP BUTTON
+========================== */
+
+.whatsapp{
+
+position:fixed;
+
+right:20px;
+bottom:20px;
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:#00ff88;
+
+color:#000;
+
+font-size:2rem;
+
+box-shadow:
+0 0 15px #00ff88;
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ==========================
+   PREMIUM ANIMATIONS
+========================== */
+
+.service-card,
+.portfolio-item,
+.about-content,
+.slide,
+.contact-form{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media(max-width:991px){
+
+.hero{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:4rem;
+
+}
+
+.stats{
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#menu-btn{
+
+display:block;
+
+}
+
+nav{
+
+position:absolute;
+
+top:80px;
+left:-100%;
+
+width:100%;
+
+background:#000;
+
+padding:20px;
+
+display:flex;
+flex-direction:column;
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+nav.active{
+
+left:0;
+
+}
+
+.hero-text h1{
+
+font-size:3rem;
+
+}
+
+.page-banner h1{
+
+font-size:2.7rem;
+
+}
+
+.section-title h2{
+
+font-size:2.2rem;
+
+}
+
+.dragon-circle{
+
+width:280px;
+height:280px;
+
+font-size:5rem;
+
+}
+
+.about-content{
+
+text-align:center;
+
+}
+
+.contact-page{
+
+flex-direction:column;
+
+}
+
+.contact-info{
+
+text-align:center;
+
+}
+
+.contact-item{
+
+justify-content:center;
+
+}
+
+}
