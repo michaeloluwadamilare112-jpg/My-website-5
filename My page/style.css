@@ -1042,3 +1042,24 @@ box-shadow:0 0 0 0 rgba(37,211,102,0);
 }
 
 }
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.portfolio-item{
+overflow:hidden;
+border-radius:20px;
+}
+
+.portfolio-item img{
+width:100%;
+display:block;
+transition:.5s;
+}
+
+.portfolio-item img:hover{
+transform:scale(1.1);
+}
