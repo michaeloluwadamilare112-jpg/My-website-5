@@ -1063,3 +1063,87 @@ transition:.5s;
 .portfolio-item img:hover{
 transform:scale(1.1);
 }
+
+.testimonials{
+padding:80px 20px;
+text-align:center;
+}
+
+.testimonials h1{
+font-size:3rem;
+margin-bottom:40px;
+color:#00ff88;
+}
+
+.review-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:#111;
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(0,255,136,.3);
+transition:.3s;
+}
+
+.review-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(0,255,136,.3);
+}
+
+.review-card p{
+color:#ccc;
+line-height:1.7;
+}
+
+.review-card h4{
+margin-top:15px;
+color:#00ff88;
+}
+
+.review-form{
+margin-top:60px;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.review-form input,
+.review-form textarea{
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+background:#111;
+
+border:1px solid #00ff88;
+
+color:#fff;
+
+border-radius:10px;
+
+}
+
+.review-form button{
+
+padding:15px 30px;
+
+background:#00ff88;
+
+border:none;
+
+color:#000;
+
+font-weight:bold;
+
+cursor:pointer;
+
+border-radius:30px;
+
+   }
