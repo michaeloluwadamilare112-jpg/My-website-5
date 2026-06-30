@@ -280,8 +280,9 @@ width:auto;
 height:auto;
 }
 .dragon-circle img{
-width:600px;
-max-width:100%;
+width:80vw;
+max-width:800px;
+min-width:350px;
 height:auto;
 
 filter:
